@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Profile</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<!-- main container starts -->
+		<div class="container">
+			<!-- nav starts -->
+			<nav>
+				<div class="logo">
+					<b>T<img src="images/logo.jpeg">D<img src="images/logo.jpeg"></b>
+				</div>
+
+				<div class="menu">
+					<a href="index.html">Home</a>
+					<a href="profile.html" id="profile">Profile</a>
+					<a href="addlist.html" id="addlist">Add List</a>
+					<a href="viewlist.html" id="viewlist">View List</a>
+					<!-- <a href="#" class="register">Register</a> -->
+					<a href="login.html" id="loginStatus" onclick="logOut()">Logout</a>
+					<a href="notification.html" id="notify" class="notify">
+						<img src="images/notify.png" height="20px" width="30px"> 
+						<span id="notification"></span>
+					</a>
+				</div>
+			</nav>
+			<!-- navbar ends -->
+
+			<!-- banner starts -->
+			<section class="banner">
+				<h3 class="banner-text" id="profileHeading">My Profile !</h3>
+			</section>
+			<!-- banner section ends -->
+
+			<!-- profile section starts here -->
+			<section class="forms">
+				<div class="form-heading">					
+					<section class="pro-info" id='info'>
+						<h2>My Details</h2>
+						<div class="form-group">
+							<img id="pimg1">
+						</div>
+						<div class="form-group">
+							<label>First Name: </label><label id="fn"> </label>
+						</div>
+
+						<div class="form-group">
+							<label>Last Name: </label><label id="ln"> </label>
+						</div>
+
+						<div class="form-group">
+							<label>Username: </label><label id="un"> </label>
+						</div>
+
+						<div class="form-group">
+							<label>Gender:</label><label id="gen"> </label>
+						</div>
+
+						<div class="form-group">
+							<label> Address:</label><label id="add"> </label>	
+						</div>
+					</section>
+				</div>
+			</section>
+			<!-- profile section ends here -->
+
+			<!-- edit profile form section starts here -->
+			<section class="forms">
+				<div class="form-heading">
+					<input type="button" onclick="edit()" class="btn-primary" value="Edit Profile">
+					
+					<form id="editForm">
+						<div class="form-group">
+							<label>First Name<span class="star">*</span>: </label>
+							<input type="text" name="fname" id="fname" class="form-control" placeholder="  Enter First Name">
+						</div>
+
+						<div class="form-group">
+							<label>Last Name<span class="star">*</span>: </label>
+							<input type="text" name="lname" id="lname" class="form-control" placeholder="  Enter Last Name">
+						</div>
+
+
+						<div class="form-group">
+							<label>Gender<span class="star">*</span>: </label>
+							<input type="radio" name="gender" id="m" value="Male" class="form-control-radio"> Male 
+							<input type="radio" name="gender" id="f" value="Female" class="form-control-radio"> Female 
+						</div>
+
+						<div class="form-group">
+							<label> Address<span class="star">*</span>: </label>
+							<textarea placeholder="Enter Address" name="address" id="address" class="form-control"></textarea>	
+						</div>
+
+						<div class="form-group">
+							<label>Profile Image<span class="star">*</span>: </label>
+							<input type="file" name="epimg" onchange="encodeImg(this)" id="epimg" class="form-control">
+						</div>
+						<div class="form-group">
+							<label id="alertmsg"></label>
+							<input type="button" onclick="editRecord()" class="btn-primary" value="Save Changes">
+						</div>
+					</form>
+				</div>
+			</section>
+			<!-- edit profile section ends here -->
+
+			<!-- footer starts here -->
+			<footer>
+				<b>Designed by Sooraj gaikwad..</b>
+			</footer>
+			<!-- footer ends here -->
+		</div>
+		<!-- main container ends here -->
+
+		<!-- js links -->
+		<script type="text/javascript" src="js/profile.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
