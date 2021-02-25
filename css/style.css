@@ -1,0 +1,42 @@
+*{margin: 0px;padding: 0px;}
+.container{max-width: 1920px;margin: auto;}
+nav{background-color: #3a3636;height: 120px;position: sticky;right: 0px;left:0px;top:0px;}
+.logo{max-width: 500px;margin:20px;color: white;font-size: 60px;float: left;font-family: 'Reggae One', cursive;}
+.logo img{height: 40px;width:40px;border-radius: 40px;}
+.menu{float: right;margin: 50px;max-width: 700px;}
+.menu a{text-decoration: none;color: white;font-size: 20px;font-family: 'arial';padding: 10px;}
+.menu a:hover{background-color: yellow;color: red;}
+.banner{max-width: 1920px;height: 500px;background-image: url("../images/banner.jpg");background-repeat: repeat-x;}
+.banner-text{text-align: center;font-family: 'Times new Roman', cursive;font-size: 60px;padding-top:200px;color: #F34213;}
+.forms{max-height: 1200px;background-color: lightgray;}
+.form-heading{text-align: center;font-family: 'Times new roman', cursive;font-size: 30px;padding-top:30px;color: #222222;}
+form{border-top: 1px solid green;border-bottom: 1px solid green;text-align: center;font-family: 'Reggae One', cursive;font-size: 20px;padding-top:30px;}
+.form-control{z-index: -1;width: 400px;height: 50px;background-image: #FFFFFF;border-radius: 5px;border: 1px solid lightgray;}
+.form-group{padding: 20px;}
+.form-control-radio{width: 20px;height: 20px;margin-left: 40px;border: 1px solid lightgray;}
+.btn-primary{background-color: green;width: 200px;height: 60px;border-radius: 5px;padding: 20px;color: white;font-size: 15px;border:1px solid white;margin-bottom: 20px;}
+#alertmsg{color: red;font-size: 20px;display: block;}
+.star{color: red;}
+footer{height: 400px;clear: both;background-color: #3a3636;}
+footer b{height: 300px;color: white;font-size: 20px;position: relative;left: 850px;top: 200px;}
+.log{display: block;}
+.pro-info{color: green;}
+#editForm{display: none;}
+.form-check{display: inline;margin: 10px;}
+#remDate{display: none;}
+/* table style */
+#listRecord { font-family: Arial, Helvetica, sans-serif;border-collapse: collapse;width:1280px;margin: auto;border-bottom: 40px solid gray;margin-bottom: 20px;}
+#listRecord td, #listRecord th {border: 1px solid #ddd;padding: 8px;font-size: 20px;color: black;text-align: center;}
+#listRecord tr:nth-child(even){background-color: #f2f2f2;}
+#listRecord tr:hover {background-color: #ddd;}
+#listRecord th {padding-top: 12px;padding-bottom: 12px;text-align: center;background-color: gray;color: white;}
+#editlistform,#deletelistform,#searchform,#msgbox{display: none;}
+.data{display: none;padding-top: 50px;}
+#pimg1{height: 200px;width: 200px;border-radius: 30px;}
+#filterBy{margin:auto;padding:30px;color: black;text-align: center;}
+#byisd,#bydate,#fbcat,#sbdate,#sbcat{display: none;font-size: 20px;}
+table img{height: 100px;widows: 200px;}
+.arrow-down{height: 20px;width: 20px;}
+.notify{background: orange;border-radius: 10px;}
+#notbox{margin: auto;background: lightgray;max-height: 800px;text-align: center;color: red;font-weight: bold;font-size: 50px;}
+#nlist, li{padding: 20px;font-size: 30px;color: green;line-height: 1;}
