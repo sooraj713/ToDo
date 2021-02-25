@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html onload="showList()">
+	<head>
+		<title>ToDO list view</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<!-- main Container starts -->
+		<div class="container">
+
+
+			<!-- navbar section starts -->
+			<nav>
+				<div class="logo">
+					<b>T<img src="images/logo.jpeg">D<img src="images/logo.jpeg"></b>
+				</div>
+
+				<div class="menu">
+					<a href="index.html">Home</a>
+					<a href="profile.html" id="profile">Profile</a>
+					<a href="addlist.html" id="addlist">Add List</a>
+					<a href="viewlist.html" id="viewlist">View List</a>
+					<!-- <a href="#" class="register">Register</a> -->
+					<a href="login.html" id="loginStatus" onclick="logOut()">Logout</a>
+					<a href="notification.html" id="notify" class="notify">
+						<img src="images/notify.png" height="20px" width="30px"> 
+						<span id="notification"></span>
+					</a>
+				</div>
+			</nav>
+			<!-- navbar section ends -->
+
+			<!-- banner section starts -->
+			<section class="banner">
+				<h3 class="banner-text" id="banner-text">My List !</h3>
+			</section>
+			<!-- banner ends -->
+
+
+			<!-- main filter and viewlist section start -->
+			<section class="forms" id="info">
+				<div class="form-heading">					
+					<section class="pro-info" id='info'>
+						<div class="">
+							<select id="filter-box" class="form-control" onchange="filter(this)">
+								<option value="select">Filter By</option>
+								<option value="isDone">Is Done Status</option>
+								<option value="dateRange">Date Range</option>
+								<option value="category">Category</option>
+							</select>
+							<img src="images/reset.png" height="40px" width="40px" name="" onclick="reset()">
+						</div>
+						<table id="filterBy">
+							<tr id="byisd">
+								<td><label>Choose Status:</label> </td>
+								<td><input type="radio" name="filter" id="isDoneYes" onclick="filterByStatus(this)" value="Pending">Pending
+								</td>
+								<td><input type="radio" name="filter" id="isDoneNo" onclick="filterByStatus(this)" value="Done">Done</td>
+							</tr>
+							<tr></tr>
+							<tr id="bydate">
+								<td>
+									From: <input type="date" name="filter" id="dateFrom"  onchange="filterByDate()" class="form-control">
+									To: <input type="date" name="filter1" id="dateTo" onchange="filterByDate()" class="form-control">
+								</td>
+							</tr>
+							<tr id="fbcat">
+								<td>
+									<select id="fcat" class="form-control" onchange="filterByCategory(this)">
+										<option value="select">Select category</option>
+										<option value="Study">Study</option>
+										<option value="Shopping">Shopping</option>
+										<option value="Travelling">Travelling</option>
+										<option value="Driving">Driving</option>
+										<option value="Office work">Office Work</option>
+									</select>
+								</td>
+							</tr>
+						</table>
+						<label id="alertbox"></label>
+						<table id="listRecord">
+							
+						  <tr>
+						    <th>Date</th>
+						    <th>Category</th>
+						    <th>Is Done</th>
+						    <th>Is Public</th>
+						    <th>IsSet Reminder</th>
+						    <th>Reminder Date</th>
+						    <th>Image</th>
+						  </tr>	
+						</table>
+						<label id = "msgbox"></label>
+						<button class="btn-primary" onclick="editListForm()">Edit List</button>
+						<button class="btn-primary" onclick="deleteListForm()">Delete List</button>
+						<button class="btn-primary" onclick="searchListForm()">Search</button>
+					</section>
+				</div>
+			</section>
+			<!-- view list section ends -->
+
+
+			<!-- edit list form starts -->
+			<section class="forms" id="editlistform">
+				<div class="form-heading">
+					<h2>Edit List</h2>
+					
+					<form>
+						<div class="form-group">
+							<label>Edit Due Date:  </label>
+							<input type="date" name="edate" id="edate" class="form-control">
+						</div>
+
+						<div class="form-group">
+							<label>Edit category:</label>
+							
+								<select name="eecat" id="eecat" class="form-control">
+								<option value="None">Select Category</option>
+								<option value="Study">Study</option>
+								<option value="Shopping">Shopping</option>
+								<option value="Travelling">Travelling</option>
+								<option value="Driving">Driving</option>
+								<option value="Office work">Office work</option>
+							</select>	
+						</div>
+
+						<div class="form-group">
+							<input type="checkbox" name="mad" id="emad" class="form-check">
+							<label>Mark as Done<span class="star">
+							
+						</div>
+
+						<div class="form-group">
+							<label>Set Reminder: <span class="star"> </label>
+							<select name="isReminder" id="eisR" class="form-control" onclick="setRem()">
+								<option value="No">No</option>
+								<option value="Present">Yes</option>
+							</select>
+							<div class="form-group" id="eremDate">
+							<label>Edit Reminder Date: </label>
+							<input type="date" name="rdate" id="erdate" class="form-control">
+						</div>
+
+						</div>
+
+
+						<div class="form-group">
+							<label>is Public:</label>
+							<input type="radio" name="ispublic" id="eispYes" value="Public" class="form-control-radio"> Yes 
+							<input type="radio" name="ispublic" id="eispNo" value="Not Public" class="form-control-radio"> No 
+						</div>
+
+
+						<div class="form-group">
+							<label>Edit Image: </label>
+							<input type="file" name="dimg" onchange="encodeImg(this)" id="edimg" class="form-control">
+							<img src="" id="preview" height="50px" width="50px">
+						</div>
+			
+						<div class="form-group">
+							<label id="alertmsg"></label>
+							<a><input type="button" onclick="editList()" class="btn-primary" value="Save"></a>
+						</div>
+					</form>
+				</div>
+			</section>
+			<!-- edit list form ends -->
+
+
+			<!-- search form starts here -->
+			<section class="forms" id="searchform">
+				<div class="form-heading">					
+					<form>
+						<div class="form-group">
+							<select name="cat" id="scat" class="form-control" onchange="searchListForm(this)">
+								<option value="None">Search by</option>
+								<option value="dueDate">Due date</option>
+								<option value="category">Category</option>
+							</select>
+						</div>
+						
+						<div class="form-group" id="sbdate">
+							<input type="date" name="date" id="sdate" class="form-control" onchange="searchListByDate(this)">
+						</div>
+
+						<div class="form-group" id="sbcat">
+							<select name="cat" id="sscat" class="form-control" onchange="searchListByCat(this)">
+								<option value="None">Select Category</option>
+								<option value="Study">Study</option>
+								<option value="Shopping">Shopping</option>
+								<option value="Travelling">Travelling</option>
+								<option value="Driving">Driving</option>
+								<option value="Office work">Office Work</option>
+							</select>
+						</div>
+
+					</form>
+				</div>
+			</section>
+			<!-- search list section ends here -->
+
+			<!-- footer section starts here -->
+			<footer>
+				<div class="data" id="data">
+					<label id="l1">Status: Found</label>
+					<label id="l5">Task: </label>
+					<label id="l2">Date: 21/02/2021</label>
+					<label id="l3">isDone: No</label>
+					<label id="l4">Is Public: No</label>
+				</div>
+				<b>Designed by Sooraj gaikwad..</b>
+			</footer>
+			<!-- footer section ends here -->
+		<script type="text/javascript" src="js/viewlist.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
