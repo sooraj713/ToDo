@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Login</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<!-- main container -->
+		<div class="container">
+			<!-- navbar -->
+			<nav>
+				<div class="logo">
+					<b>T<img src="images/logo.jpeg">D<img src="images/logo.jpeg"></b>
+				</div>
+
+				<div class="menu">
+					<a href="index.html">Home</a>
+					<a href="profile.html" id="profile">Profile</a>
+					<a href="addlist.html" id="addlist">Add List</a>
+					<a href="viewlist.html" id="viewlist">View List</a>
+					<!-- <a href="#" class="register">Register</a> -->
+					<a href="login.html" id="loginStatus" onclick="logOut()">Login</a>
+					<a href="notification.html" id="notify" class="notify">
+						<img src="images/notify.png" height="20px" width="30px"> 
+						<span id="notification"></span>
+					</a>
+				</div>
+			</nav>
+			<!-- navbar ends -->
+
+			<!-- banner starts -->
+			<section class="banner">
+				<h3 class="banner-text">Login Form !</h3>
+			</section>
+			<!-- banner ends -->
+
+			<!-- login form section starts -->
+			<section class="forms" id="loginform">
+				<div class="form-heading">
+					<h2>Login Form</h2>
+					
+					<form>
+						<div class="form-group">
+							<label>Username<span class="star">*</span>: </label>
+							<input type="text" name="username" id="u_name" class="form-control" placeholder="  Enter username">
+						</div>
+
+						<div class="form-group">
+							<label>Password<span class="star">*</span>: </label>
+							<input type="password" name="password" id="u_pass" placeholder="  Enter Password" class="form-control">
+						</div>
+						<div class="form-group">
+							<label id="loginmsg"></label>
+							<a id="login"><input type="button" onclick="isAuthenticatedUser()" class="btn-primary" value="Login"></a>
+							<label class="log">Don't have an account, please: <a href="index.html">Register</a></label>
+						</div>
+					</form>
+				</div>
+			</section>
+			<!-- login form section ends -->
+
+			<!-- footer starts -->
+			<footer>
+				<b>Designed by Sooraj gaikwad..</b>
+			</footer>
+			<!-- footer ends -->
+		</div>
+		<!-- main container ends -->
+
+		<!-- js links -->
+		<script type="text/javascript" src="js/login.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
