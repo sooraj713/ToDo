@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Add a ToDo List</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<!-- main container starts -->
+		<div class="container">
+			<!-- navbar starts -->
+			<nav>
+				<div class="logo">
+					<b>T<img src="images/logo.jpeg">D<img src="images/logo.jpeg"></b>
+				</div>
+
+				<div class="menu">
+					<a href="index.html">Home</a>
+					<a href="profile.html" id="profile">Profile</a>
+					<a href="addlist.html" id="addlist">Add List</a>
+					<a href="viewlist.html" id="viewlist">View List</a>
+					
+					<a href="login.html" id="loginStatus" onclick="logOut()">Login</a>
+					<a href="notification.html" id="notify" class="notify">
+						<img src="images/notify.png" height="20px" width="30px"> 
+						<span id="notification"></span>
+					</a>
+				</div>
+			</nav>
+			<!-- navbar ends -->
+
+			<!-- banner starts -->
+			<section class="banner">
+				<h3 class="banner-text" id="btext">To Do Lists !</h3>
+			</section>
+			<!-- banner ends -->
+
+			<!-- Addlist form starts from here -->
+			<section class="forms" id="addform">
+				<div class="form-heading">
+					<h2>Add List</h2>
+					
+					<form>
+						<div class="form-group">
+							<label>Due Date: <span class="star">*</span>: </label>
+							<input type="date" name="date" id="date" class="form-control" onchange="dateValid(this)">
+						</div>
+
+						<div class="form-group">
+							<label>Select category:</label>
+							
+								<select name="cat" id="cat" class="form-control">
+								<option value="None">Select Category</option>
+								<option value="Study">Study</option>
+								<option value="Shopping">Shopping</option>
+								<option value="Travelling">Travelling</option>
+								<option value="Driving">Driving</option>
+								<option value="Office work">Office work</option>
+							</select>	
+							
+							
+						</div>
+
+						<!-- <div class="form-group">
+							<input type="checkbox" name="mad" id="mad" class="form-check">
+							<label>Mark as Done<span class="star">
+							
+						</div> -->
+
+						<div class="form-group">
+							<label>Set Reminder: <span class="star"> </label>
+							<select name="isReminder" id="isR" class="form-control" onclick="setRem()">
+								<option value="Not present">No</option>
+								<option value="Present">Yes</option>
+							</select>
+							<div class="form-group" id="remDate">
+							<label>Reminder Date: </label>
+							<input type="date" name="rdate" id="rdate" class="form-control">
+						</div>
+
+						</div>
+
+
+						<div class="form-group">
+							<label>is Public:</label>
+							<input type="radio" name="ispublic" id="ispYes" value="Yes" class="form-control-radio"> Yes 
+							<input type="radio" name="ispublic" id="ispNo" value="No" class="form-control-radio"> No 
+						</div>
+
+
+						<div class="form-group">
+							<label>Attach Image: </label>
+							<input type="file" name="dimg" onchange="encodeImg(this)" id="dimg" class="form-control">
+						</div>
+			
+						<div class="form-group">
+							<label id="alertmsg"></label>
+							<a id="link"><input type="button" onclick="insertList()" class="btn-primary" value="Add"></a>
+						</div>
+					</form>
+				</div>
+			</section>
+			<!-- addlist form section ends here -->
+
+			<!-- footer starts here -->
+			<footer>
+				<b>Designed by Sooraj gaikwad..</b>
+			</footer>
+			<!-- footer ends -->
+		</div>
+		<!-- main container ends -->
+
+		<!-- js links -->
+		<script type="text/javascript" src="js/addlist.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
