@@ -12,7 +12,8 @@
 			<!-- nav starts -->
 			<nav>
 				<div class="logo">
-					<b>T<img src="images/logo.jpeg">D<img src="images/logo.jpeg"></b>
+					<img src="images/logo.png" class="logo-txt">
+					<b class="logo-txt">TODO</b>
 				</div>
 
 				<div class="menu">
@@ -22,7 +23,7 @@
 					<a href="viewlist.html" id="viewlist">View List</a>
 					<!-- <a href="#" class="register">Register</a> -->
 					<a href="login.html" id="loginStatus" onclick="logOut()">Logout</a>
-					<a href="notification.html" id="notify" class="notify">
+					<a href="notification.html" id="notify" class="notify" title="notifications">
 						<img src="images/notify.png" height="20px" width="30px"> 
 						<span id="notification"></span>
 					</a>
@@ -30,40 +31,33 @@
 			</nav>
 			<!-- navbar ends -->
 
-			<!-- banner starts -->
-			<section class="banner">
-				<h3 class="banner-text" id="profileHeading">My Profile !</h3>
-			</section>
-			<!-- banner section ends -->
-
 			<!-- profile section starts here -->
-			<section class="forms">
-				<div class="form-heading">					
-					<section class="pro-info" id='info'>
-						<h2>My Details</h2>
-						<div class="form-group">
-							<img id="pimg1">
-						</div>
-						<div class="form-group">
-							<label>First Name: </label><label id="fn"> </label>
-						</div>
+			<div class="form-heading">
+				<h3 id="phead">My Profile</h3>	
+			</div>
+			
+			<section class="card" id='info'>
+				<div class="form-group">
+					<img id="pimg1">
+				</div>
+				<div class="form-group">
+					<label>First Name: </label><label id="fn"> </label>
+				</div>
 
-						<div class="form-group">
-							<label>Last Name: </label><label id="ln"> </label>
-						</div>
+				<div class="form-group">
+					<label>Last Name: </label><label id="ln"> </label>
+				</div>
 
-						<div class="form-group">
-							<label>Username: </label><label id="un"> </label>
-						</div>
+				<div class="form-group">
+					<label>Username: </label><label id="un"> </label>
+				</div>
 
-						<div class="form-group">
-							<label>Gender:</label><label id="gen"> </label>
-						</div>
+				<div class="form-group">
+					<label>Gender:</label><label id="gen"> </label>
+				</div>
 
-						<div class="form-group">
-							<label> Address:</label><label id="add"> </label>	
-						</div>
-					</section>
+				<div class="form-group">
+					<label> Address:</label><label id="add"> </label>	
 				</div>
 			</section>
 			<!-- profile section ends here -->
@@ -71,9 +65,12 @@
 			<!-- edit profile form section starts here -->
 			<section class="forms">
 				<div class="form-heading">
-					<input type="button" onclick="edit()" class="btn-primary" value="Edit Profile">
 					
-					<form id="editForm">
+					
+					<form id="editForm" class="card">
+						<div class="form-group">
+							<img id="pimg2">
+						</div>
 						<div class="form-group">
 							<label>First Name<span class="star">*</span>: </label>
 							<input type="text" name="fname" id="fname" class="form-control" placeholder="  Enter First Name">
@@ -102,16 +99,18 @@
 						</div>
 						<div class="form-group">
 							<label id="alertmsg"></label>
-							<input type="button" onclick="editRecord()" class="btn-primary" value="Save Changes">
+							<input type="button" onclick="editRecord(this)" class="btn-primary" value="Save Changes">
 						</div>
 					</form>
+
+					<input type="button" id="editbtn" onclick="edit(this)" class="btn-primary" value="Edit Profile">
 				</div>
 			</section>
 			<!-- edit profile section ends here -->
 
 			<!-- footer starts here -->
 			<footer>
-				<b>Designed by Sooraj gaikwad..</b>
+				<b>Designed By Sooraj Gaikwad.</b>
 			</footer>
 			<!-- footer ends here -->
 		</div>
