@@ -17,7 +17,6 @@
 	if(flag)
 	{	
 		document.getElementById('pimg1').src = userObj.image;
-		document.getElementById('profileHeading').innerHTML = "Welcome..."+userObj.firstName;
 		document.getElementById('info').style.display = 'block';
 		document.getElementById('fn').textContent = userObj.firstName;
 		document.getElementById('ln').textContent = userObj.lastName;
@@ -34,7 +33,10 @@
 // profile display function ends.....................................................
 
 //edit profile function starts here: all values filled automatically..............
-function edit(){
+function edit(btn){
+	document.getElementById("phead").textContent = "Edit Profile";
+	document.getElementById("editbtn").style.display = "none";
+	document.getElementById("info").style.display = "none";
 	document.getElementById('editForm').style.display = 'block';
 	//code for auto filll the values in edit form 	
 	let list = JSON.parse(localStorage.getItem('users'));
@@ -49,7 +51,7 @@ function edit(){
 				document.getElementById('m').checked = true;
 			else
 				document.getElementById('f').checked = true;	
-			document.getElementById('pp').src = list[i].image;
+			document.getElementById('pimg2').src = list[i].image;
 		}
 	}
 }
@@ -68,8 +70,7 @@ function encodeImg(element) {
 }  
 
 //edit the user profile.....................
-function editRecord(){
-
+function editRecord(element){
 	let firstName = document.getElementById("fname").value;
 	let lastName = document.getElementById("lname").value;
 	let m = document.getElementById("m").checked;
