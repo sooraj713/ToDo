@@ -12,7 +12,8 @@
 			<!-- navbar starts -->
 			<nav>
 				<div class="logo">
-					<b>T<img src="images/logo.jpeg">D<img src="images/logo.jpeg"></b>
+					<img src="images/logo.png" class="logo-txt">
+					<b class="logo-txt">TODO</b>
 				</div>
 
 				<div class="menu">
@@ -21,7 +22,7 @@
 					<a href="addlist.html" id="addlist">Add List</a>
 					<a href="viewlist.html" id="viewlist">View List</a>
 					<a href="login.html" id="loginStatus" onclick="logOut()">Login</a>
-					<a href="notification.html" id="notify" class="notify">
+					<a href="notification.html" id="notify" class="notify" title="notifications">
 						<img src="images/notify.png" height="20px" width="30px"> 
 						<span id="notification"></span>
 					</a>
@@ -29,58 +30,76 @@
 			</nav>
 			<!-- navbar ends -->
 
-			<!-- banner section starts -->
-			<section class="banner">
-				<h3 class="banner-text">To Do Lists !</h3>
-			</section>
-			<!-- banner section ends -->
-
+			<!-- dashboard section starts -->
+		<div class="dcard" id="dcard">
+			<div class="dashbord">
+				<div class="dcontaint">
+					<h3>TODAYS REMINDERS</h3>
+					<p id="tr">0</p>
+				</div>
+			</div>
+			<div class="dashbord">
+				<div class="dcontaint">
+					<h3>TOTAL LISTS</h3>
+					<p id="tl">0</p>
+				</div>
+			</div>
+			<div class="dashbord">
+				<div class="dcontaint">
+					<h3>COMPLETED TASKS</h3>
+					<p id="ct">0</p>
+				</div>
+			</div><div class="dashbord">
+				<div class="dcontaint">
+					<h3>PENDING TASKS</h3>
+					<p id="pt">0</p>
+				</div>
+			</div>
+			
+		</div>
+		
+			<!-- dashboard section ends -->
+			
 			<!-- sign up form section starts -->
 			<section class="forms" id="rform">
 				<div class="form-heading">
-					<h2>Sign Up</h2>
-					
+					<h3>Lets Sign Up To Get Started</h3>
 					<form>
 						<div class="form-group">
-							<label>First Name: <span class="star">*</span>: </label>
-							<input type="text" name="fname" id="fname" class="form-control" placeholder="  Enter First Name">
+							<input type="text" name="fname" id="fname" class="form-control" placeholder="Enter Your First Name*">
 						</div>
 
 						<div class="form-group">
-							<label>Last Name : <span class="star">*</span> </label>
-							<input type="text" name="lname" id="lname" class="form-control" placeholder="  Enter Last Name">
+							<input type="text" name="lname" id="lname" class="form-control" placeholder="Enter Your Last Name*">
 						</div>
 
 						<div class="form-group">
-							<label>Username : <span class="star">*</span>  </label>
-							<input type="text" name="uname" id="uname" class="form-control" placeholder="  Enter username">
+							<input type="text" name="uname" id="uname" class="form-control" placeholder="Enter Username*">
 						</div>
 
 						<div class="form-group">
-							<label>Password : <span class="star">*</span>: </label>
-							<input type="password" name="pass" id="pass" placeholder="  Enter Password" class="form-control">
+							<textarea placeholder="  Enter Address*" name="address" id="address" class="form-control"></textarea>	
 						</div>
 
 
+
 						<div class="form-group">
-							<label>Gender<span class="star">*</span>: </label>
+							<label>Select Gender<span class="star">*</span>: </label>
 							<input type="radio" name="gender" id="m" value="Male" class="form-control-radio"> Male 
 							<input type="radio" name="gender" id="f" value="Female" class="form-control-radio"> Female 
 						</div>
 
 						<div class="form-group">
-							<label> Address<span class="star">*</span>: </label>
-							<textarea placeholder="Enter Address" name="address" id="address" class="form-control"></textarea>	
-						</div>
-
-						<div class="form-group">
-							<label>Profile Image<span class="star">*</span>: </label>
+							<label class="file-label">Upload Profile Image<span class="star">*</span>: </label><br><br>
 							<input type="file" onchange="encodeImg(this)" name="pimg" id="pimg" class="form-control" required="">
 						</div>
 						<div class="form-group">
+							<input type="password" name="pass" id="pass" placeholder="Enter Password*" class="form-control">
+						</div>
+						<div class="form-group">
 							<label id="alertmsg"></label>
-							<input type="button" onclick="insertRecord()" class="btn-primary" value="Register">
-							<label class="log">Already have an account Please: <a href="login.html">login</a></label>
+							<input type="button" onclick="insertRecord()" class="btn-primary" value="Sign Up">
+							<label class="log">Already have an account? <a href="login.html">Click here to login.</a></label>
 						</div>
 					</form>
 				</div>
@@ -89,7 +108,7 @@
 
 			<!-- footer starts -->
 			<footer>
-				<b>Designed by Sooraj gaikwad..</b>
+				<b>Designed By Sooraj Gaikwad.</b>
 			</footer>
 			<!-- footer ends -->
 		</div>
