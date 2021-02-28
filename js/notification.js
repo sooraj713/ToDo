@@ -28,7 +28,7 @@ if(localStorage.getItem('activeUser') == 'false' || !localStorage.getItem('activ
 			if(list[i].userName == activeUser && current.getDate() == date.getDate() && current.getMonth() == date.getMonth())
 			{
 				count= count + 1;
-				code+= `<li>Notification ${count}: Today You have to Do: ${list[i].categories}</li>`;
+				code+= `<p>Notification ${count}: Today You have to Do: ${list[i].categories}</p>`;
 				flag = 1;
 			}
 		}
