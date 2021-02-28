@@ -8,6 +8,7 @@
 		document.getElementById('addlist').style.display = "none";
 		document.getElementById('viewlist').style.display = "none";
 		document.getElementById("notify").style.display = 'none';
+		document.getElementById('dcard').style.display = "none";
 	}
 	else if(window.location.href.length == 71 && localStorage.getItem('activeUser') != 'false')
 	{

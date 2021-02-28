@@ -1,42 +1,65 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
 *{margin: 0px;padding: 0px;}
 .container{max-width: 1920px;margin: auto;}
-nav{background-color: #3a3636;height: 120px;position: sticky;right: 0px;left:0px;top:0px;}
-.logo{max-width: 500px;margin:20px;color: white;font-size: 60px;float: left;font-family: 'Reggae One', cursive;}
-.logo img{height: 40px;width:40px;border-radius: 40px;}
+nav{background-color: #6f42c1;height: 100px;position: sticky;right: 0px;left:0px;top:0px;}
+.logo{color: white;float: left;}
+.logo-img{height: 80px;width:80px;border-radius: 40px; padding-top: 0px;}
+.logo-txt{height: 80px;width:80px;font-size: 60px;}
 .menu{float: right;margin: 50px;max-width: 700px;}
-.menu a{text-decoration: none;color: white;font-size: 20px;font-family: 'arial';padding: 10px;}
-.menu a:hover{background-color: yellow;color: red;}
-.banner{max-width: 1920px;height: 500px;background-image: url("../images/banner.jpg");background-repeat: repeat-x;}
-.banner-text{text-align: center;font-family: 'Times new Roman', cursive;font-size: 60px;padding-top:200px;color: #F34213;}
-.forms{max-height: 1200px;background-color: lightgray;}
-.form-heading{text-align: center;font-family: 'Times new roman', cursive;font-size: 30px;padding-top:30px;color: #222222;}
-form{border-top: 1px solid green;border-bottom: 1px solid green;text-align: center;font-family: 'Reggae One', cursive;font-size: 20px;padding-top:30px;}
-.form-control{z-index: -1;width: 400px;height: 50px;background-image: #FFFFFF;border-radius: 5px;border: 1px solid lightgray;}
-.form-group{padding: 20px;}
-.form-control-radio{width: 20px;height: 20px;margin-left: 40px;border: 1px solid lightgray;}
-.btn-primary{background-color: green;width: 200px;height: 60px;border-radius: 5px;padding: 20px;color: white;font-size: 15px;border:1px solid white;margin-bottom: 20px;}
+.menu a{text-decoration: none;opacity: 0.7; color: white;font-size: 20px;padding: 10px;}
+.menu a:hover{opacity: 1;}
+.forms{max-height: 1200px;background-color: white; padding-bottom: 200px;}
+.form-heading{text-align: center;font-size: 30px;padding-top:30px;color: #222222;}
+form{text-align: center;font-size: 20px;}
+.form-control{display:block;margin: auto; width: 350px;height: 50px;background: #FFFFFF;border-radius: 5px;}
+.form-group{padding: 15px;}
+.form-heading h2{padding-bottom: 10px;}
+.form-group input {font-size: 16px;border:1px solid black;}
+select{font-size: 16px;border:1px solid black;}
+input::placeholder {padding-left: 10px;}
+#alertmsg,#loginmsg{padding-bottom: 15px;}
+.form-group .file-label{font-size: 20px; margin-right:150px;}
+.form-group input[type=file]{ font-size: 16px;height: 27px;}
+.form-group textarea{font-size: 16px;padding-top:10px;border:1px solid black;}
+.form-control-radio{width: 20px;height: 20px;margin-left: 20px;border: 1px solid white;}
+.btn-primary:hover{opacity: 0.7;}
+.btngrp{margin:auto;}
+.btn-primary{cursor:pointer;background-color: #7952b3;width: 190px;height: 60px;border-radius: 5px;padding: 20px;color: white;font-size: 15px;border:1px solid white;margin-bottom: 20px;}
 #alertmsg{color: red;font-size: 20px;display: block;}
 .star{color: red;}
-footer{height: 400px;clear: both;background-color: #3a3636;}
-footer b{height: 300px;color: white;font-size: 20px;position: relative;left: 850px;top: 200px;}
+.table-list{float: right;margin-right: 100px; width: 350px;padding-top: 20px; border-left: 1px solid purple;}
 .log{display: block;}
-.pro-info{color: green;}
+.pro-info{overflow-y: auto; height: 1000px; border-right: 1px solid black; color: green;padding-top: 20px;padding-left: 20px;max-width: 420px; scroll-behavior: initial;}
 #editForm{display: none;}
 .form-check{display: inline;margin: 10px;}
 #remDate{display: none;}
 /* table style */
-#listRecord { font-family: Arial, Helvetica, sans-serif;border-collapse: collapse;width:1280px;margin: auto;border-bottom: 40px solid gray;margin-bottom: 20px;}
+#listRecord { border-collapse: collapse;width: 1050px; border-bottom: 40px solid #6f42c1;margin-bottom: 20px;}
 #listRecord td, #listRecord th {border: 1px solid #ddd;padding: 8px;font-size: 20px;color: black;text-align: center;}
-#listRecord tr:nth-child(even){background-color: #f2f2f2;}
+#listRecord tr:nth-child(even){}
 #listRecord tr:hover {background-color: #ddd;}
-#listRecord th {padding-top: 12px;padding-bottom: 12px;text-align: center;background-color: gray;color: white;}
-#editlistform,#deletelistform,#searchform,#msgbox{display: none;}
+#listRecord th {width: 125px; padding-top: 12px;padding-bottom: 12px;text-align: center;background-color: #6f42c1;color: white;}
+#editlistform,#deletelistform,#searchform,#msgbox{clear: both; display: none;margin:auto;}
 .data{display: none;padding-top: 50px;}
-#pimg1{height: 200px;width: 200px;border-radius: 30px;}
-#filterBy{margin:auto;padding:30px;color: black;text-align: center;}
+.alertmsg{font-size: 25px;margin: auto;}
+#pimg1,#pimg2{height: 100px;width: 100px;border-radius: 30px;}
+#filterBy{color: black; margin: auto;}
 #byisd,#bydate,#fbcat,#sbdate,#sbcat{display: none;font-size: 20px;}
-table img{height: 100px;widows: 200px;}
+table img{height: 100px;width: 100px;}
 .arrow-down{height: 20px;width: 20px;}
-.notify{background: orange;border-radius: 10px;}
-#notbox{margin: auto;background: lightgray;max-height: 800px;text-align: center;color: red;font-weight: bold;font-size: 50px;}
-#nlist, li{padding: 20px;font-size: 30px;color: green;line-height: 1;}
+.notify{background: white;border-radius: 150px;opacity: 1 !important;}
+#notification{color: black;}
+#notbox{padding: 20px;margin: auto;background: white;display: inline-block;font-weight: bold;}
+#nlist p{margin:15px;width:1280px;border-radius:15px;border:2px solid green;background-color:lightgreen;padding:20px;font-size: 20px;color: green;}
+footer{position: fixed;bottom: 0px;background: #6f42c1;text-align: left;color:#FFFFFF;font-size: 20px;padding: 15px;width: 1920px;}
+footer b{margin-left: 650px;}
+.card{width: 500px;margin:auto;max-height: 1200px;background-color: #fbfbfb;box-shadow: 0px 20px 40px #5030200D;border-radius: 20px;text-align: center;color: #222222;font-size: 26px;border:1px solid purple;}
+input[type=checkbox], img{cursor: pointer;}
+#welcome{margin-top: 120px;}
+.filter{width: 330px;float: left;}
+.reset{float: right;margin-right: 35px;}
+.dcard{float: left;margin-left: 85px;}
+.dashbord{width:300px;background-color:#34495E;color:#fff;margin: 20px;display: inline-block;border-radius: 10px;height: 200px;}
+.dcontaint h3{text-align: center;font-size: 25px;padding-top: 20px;}
+.dcontaint p{text-align: center;padding: 10px;font-size: 100px;}
+body{font-family: Arial, Helvetica, sans-serif;}

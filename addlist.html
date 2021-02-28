@@ -12,7 +12,8 @@
 			<!-- navbar starts -->
 			<nav>
 				<div class="logo">
-					<b>T<img src="images/logo.jpeg">D<img src="images/logo.jpeg"></b>
+					<img src="images/logo.png" class="logo-txt">
+					<b class="logo-txt">TODO</b>
 				</div>
 
 				<div class="menu">
@@ -22,22 +23,22 @@
 					<a href="viewlist.html" id="viewlist">View List</a>
 					
 					<a href="login.html" id="loginStatus" onclick="logOut()">Login</a>
-					<a href="notification.html" id="notify" class="notify">
+					<a href="notification.html" id="notify" class="notify" title="notifications">
 						<img src="images/notify.png" height="20px" width="30px"> 
-						<span id="notification"></span>
+						<span class="notification" id="notification"></span>
 					</a>
 				</div>
 			</nav>
 			<!-- navbar ends -->
 
 			<!-- banner starts -->
-			<section class="banner">
+			<!-- <section class="banner">
 				<h3 class="banner-text" id="btext">To Do Lists !</h3>
-			</section>
+			</section> -->
 			<!-- banner ends -->
 
 			<!-- Addlist form starts from here -->
-			<section class="forms" id="addform">
+			<section class="forms" id="addform" onsubmit="return false">
 				<div class="form-heading">
 					<h2>Add List</h2>
 					
@@ -48,7 +49,7 @@
 						</div>
 
 						<div class="form-group">
-							<label>Select category:</label>
+							<label>Select category: <span class="star">*</span>:</label>
 							
 								<select name="cat" id="cat" class="form-control">
 								<option value="None">Select Category</option>
@@ -57,46 +58,36 @@
 								<option value="Travelling">Travelling</option>
 								<option value="Driving">Driving</option>
 								<option value="Office work">Office work</option>
-							</select>	
-							
-							
+							</select>
 						</div>
 
-						<!-- <div class="form-group">
-							<input type="checkbox" name="mad" id="mad" class="form-check">
-							<label>Mark as Done<span class="star">
-							
-						</div> -->
-
 						<div class="form-group">
-							<label>Set Reminder: <span class="star"> </label>
+							<label>Set Reminder: <span class="star">* </label>
 							<select name="isReminder" id="isR" class="form-control" onclick="setRem()">
 								<option value="Not present">No</option>
 								<option value="Present">Yes</option>
 							</select>
 							<div class="form-group" id="remDate">
-							<label>Reminder Date: </label>
-							<input type="date" name="rdate" id="rdate" class="form-control">
+								<label>Reminder Date: <span class="star">*</span>:</label>
+								<input type="date" name="rdate" id="rdate" class="form-control">
+							</div>
 						</div>
-
-						</div>
-
 
 						<div class="form-group">
-							<label>is Public:</label>
+							<label>is Public: <span class="star">*</span>:</label>
 							<input type="radio" name="ispublic" id="ispYes" value="Yes" class="form-control-radio"> Yes 
 							<input type="radio" name="ispublic" id="ispNo" value="No" class="form-control-radio"> No 
 						</div>
 
 
 						<div class="form-group">
-							<label>Attach Image: </label>
+							<label>Attach Image: <span class="star">*</span>:</label>
 							<input type="file" name="dimg" onchange="encodeImg(this)" id="dimg" class="form-control">
 						</div>
 			
 						<div class="form-group">
 							<label id="alertmsg"></label>
-							<a id="link"><input type="button" onclick="insertList()" class="btn-primary" value="Add"></a>
+							<a id="link"><input type="submit" onclick="insertList()" class="btn-primary" value="Add List"></a>
 						</div>
 					</form>
 				</div>
@@ -105,7 +96,7 @@
 
 			<!-- footer starts here -->
 			<footer>
-				<b>Designed by Sooraj gaikwad..</b>
+				<b>Designed By Sooraj Gaikwad.</b>
 			</footer>
 			<!-- footer ends -->
 		</div>

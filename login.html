@@ -12,7 +12,8 @@
 			<!-- navbar -->
 			<nav>
 				<div class="logo">
-					<b>T<img src="images/logo.jpeg">D<img src="images/logo.jpeg"></b>
+					<img src="images/logo.png" class="logo-txt">
+					<b class="logo-txt">TODO</b>
 				</div>
 
 				<div class="menu">
@@ -22,39 +23,30 @@
 					<a href="viewlist.html" id="viewlist">View List</a>
 					<!-- <a href="#" class="register">Register</a> -->
 					<a href="login.html" id="loginStatus" onclick="logOut()">Login</a>
-					<a href="notification.html" id="notify" class="notify">
+					<a href="notification.html" id="notify" class="notify" title="notifications">
 						<img src="images/notify.png" height="20px" width="30px"> 
 						<span id="notification"></span>
 					</a>
 				</div>
 			</nav>
 			<!-- navbar ends -->
-
-			<!-- banner starts -->
-			<section class="banner">
-				<h3 class="banner-text">Login Form !</h3>
-			</section>
-			<!-- banner ends -->
-
 			<!-- login form section starts -->
-			<section class="forms" id="loginform">
+			<section class="forms" id="loginform" onsubmit="return false">
 				<div class="form-heading">
 					<h2>Login Form</h2>
 					
-					<form>
+					<form id="loginform">
 						<div class="form-group">
-							<label>Username<span class="star">*</span>: </label>
 							<input type="text" name="username" id="u_name" class="form-control" placeholder="  Enter username">
 						</div>
 
 						<div class="form-group">
-							<label>Password<span class="star">*</span>: </label>
 							<input type="password" name="password" id="u_pass" placeholder="  Enter Password" class="form-control">
 						</div>
 						<div class="form-group">
 							<label id="loginmsg"></label>
-							<a id="login"><input type="button" onclick="isAuthenticatedUser()" class="btn-primary" value="Login"></a>
-							<label class="log">Don't have an account, please: <a href="index.html">Register</a></label>
+							<a id="login"><button onclick="isAuthenticatedUser()" class="btn-primary">Login</button></a>
+							<label class="log">Don't have an account ? please: <a href="index.html">Sign Up</a> with us.</label>
 						</div>
 					</form>
 				</div>
@@ -63,7 +55,7 @@
 
 			<!-- footer starts -->
 			<footer>
-				<b>Designed by Sooraj gaikwad..</b>
+				<b>Designed By Sooraj Gaikwad.</b>
 			</footer>
 			<!-- footer ends -->
 		</div>

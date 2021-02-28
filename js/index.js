@@ -26,15 +26,16 @@ function insertRecord() {
 	let address = document.getElementById("address").value;
 
 	//validation starts.....................................
-	if (!/[A-Z]$/i.test(firstName)  || /(\d+)/.test(firstName)) {
-		label.textContent = "*please enter valid first name..";
+	if (!/[A-Z ]$/i.test(firstName)  || /(\d+)/.test(firstName)) {
+		label.textContent = "Please enter valid First Name..!";
 	}
-	else if(!/[A-Z]$/i.test(lastName) || /(\d+)/.test(lastName)) {
-		label.textContent = "*please enter valid last name..";
+	else if(!/[A-Z ]$/i.test(lastName) || /(\d+)/.test(lastName)) {
+		label.textContent = "Please enter valid Last Name..!";
 	}
-	else if(password.length > 8) {
-		label.textContent = "*password should be of max 8 characters..";
+	else if(!/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/.test(password)) {
+		label.textContent = "Password should contain atleast one number and one special character..!";
 	}
+
 	else{
 
 	let m = document.getElementById("m").checked;
@@ -73,8 +74,11 @@ function insertRecord() {
 		if (flag) {
 			u.push(newUser);
 			localStorage.setItem('users', JSON.stringify(u));
-			label.innerHTML = `* Congratulation ${firstName} you have Registered Successfully*`;
+			label.innerHTML = `"${firstName}" you have successfully signed up..! We're redirecting you, please wait 3 sec.. *`;
 			label.style.color = 'green';
+			setTimeout(function(){
+            window.location.href = 'login.html';
+         }, 3000);
 		}
 	}
 }
@@ -82,3 +86,18 @@ function insertRecord() {
 
 //this is for showing the notification count.......................................
 document.getElementById("notification").innerHTML = Number(localStorage.getItem('notifications'));
+document.getElementById("tr").innerHTML = Number(localStorage.getItem('notifications'));
+let list = JSON.parse(localStorage.getItem('ToDo'));
+let count = 0, donecnt = 0, pendingcnt = 0;
+let au = localStorage.getItem('activeUser');
+for (let i = list.length - 1; i >= 0; i--) {
+	if(list[i].userName == au)
+		count++;
+	if (list[i].userName == au && list[i].isMarkAsDone == "Done")
+		donecnt++;
+	if (list[i].userName == au && list[i].isMarkAsDone == "Pending")
+		pendingcnt++;
+}
+document.getElementById("tl").innerHTML = count;
+document.getElementById("ct").innerHTML = pendingcnt;
+document.getElementById("pt").innerHTML = donecnt;
