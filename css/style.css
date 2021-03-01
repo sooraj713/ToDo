@@ -27,7 +27,7 @@ input::placeholder {padding-left: 10px;}
 .btn-primary{cursor:pointer;background-color: #7952b3;width: 190px;height: 60px;border-radius: 5px;padding: 20px;color: white;font-size: 15px;border:1px solid white;margin-bottom: 20px;}
 #alertmsg{color: red;font-size: 20px;display: block;}
 .star{color: red;}
-.table-list{float: right;margin-right: 100px; width: 350px;padding-top: 20px; border-left: 1px solid purple;}
+.table-list{float: right;margin-right: 120px; width: 350px;padding-top: 20px; border-left: 1px solid purple;}
 .log{display: block;}
 .pro-info{overflow-y: auto; height: 1000px; border-right: 1px solid black; color: green;padding-top: 20px;padding-left: 20px;max-width: 420px; scroll-behavior: initial;}
 #editForm{display: none;}
