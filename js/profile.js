@@ -82,7 +82,7 @@ function editRecord(element){
 		gender = 'Female';
 	let address = document.getElementById("address").value;
 
-	if (firstName == "" || lastName =="" || gender == "" || address == ""){
+	if (firstName == "" || !firstName.trim() || lastName =="" || !lastName.trim() || gender == "" || address == "" || !address.trim()){
 		let label = document.getElementById("alertmsg");
 		label.innerHTML = "*Please Enter All Details*";
 	}
