@@ -1,8 +1,8 @@
 	//doesn't provide access to unauthorized user.......................
 	if(localStorage.getItem('activeUser') == 'false' || !localStorage.getItem('activeUser'))
 	{
-		document.getElementById('btext').innerHTML = "Please Login...";
 		document.getElementById('addform').style.display = 'none';
+		window.location.href = "login.html";
 	}
 
 
@@ -100,7 +100,7 @@
 			label.textContent = "Please enter the reminder date..";
 			label.style.color = "red";
 		}
-		else if(rd < dueDate)
+		else if(rd>dueDate || rd<current)
 		{
 			label.textContent = "Reminder date should be before due Date..";
 			label.style.color = "red";

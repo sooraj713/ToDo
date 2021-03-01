@@ -1,8 +1,8 @@
 //doesn't provide access to unauthorized user.......................
 if(localStorage.getItem('activeUser') == 'false' || !localStorage.getItem('activeUser'))
 {
-	document.getElementById('banner-text').innerHTML = "Please Login...";
 	document.getElementById('notbox').style.display = 'none';
+	window.location.href = "login.html";
 }
 
 //find todays reminder and show in notification .............................. 
@@ -11,7 +11,6 @@ if(localStorage.getItem('activeUser') == 'false' || !localStorage.getItem('activ
 	if(activeUser == 'false')
 	{
 		document.getElementById('notbox').style.display = "none";
-		alert("logout");
 	}
 	else if(!localStorage.getItem("ToDo"))
 	{}

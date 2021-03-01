@@ -1,8 +1,8 @@
 //doesn't provide access to unauthorized user.......................
 if(localStorage.getItem('activeUser') == 'false' || !localStorage.getItem('activeUser'))
 {
-	document.getElementById('banner-text').innerHTML = "Please Login...";
 	document.getElementById('info').style.display = 'none';
+	window.location.href = "login.html";
 }
 
 //for converting image into base63 and storing it in localStorage..................
@@ -45,6 +45,7 @@ let sort;
 			sbc : "ar.png",
 			sbrd : "ar.png"
 		}	
+		localStorage.setItem('sort',JSON.stringify(sort))
 	}
 	else
 		sort = JSON.parse(localStorage.getItem('sort'));

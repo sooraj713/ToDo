@@ -26,8 +26,8 @@
 	}
 	else
 	{
-		document.getElementById('profileHeading').innerHTML = "Please Login...";
 		document.getElementById('info').style.display = 'none';
+		window.location.href = "login.html";
 	}
 })();
 // profile display function ends.....................................................

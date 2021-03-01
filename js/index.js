@@ -87,6 +87,10 @@ function insertRecord() {
 //this is for showing the notification count.......................................
 document.getElementById("notification").innerHTML = Number(localStorage.getItem('notifications'));
 document.getElementById("tr").innerHTML = Number(localStorage.getItem('notifications'));
+if (!localStorage.getItem('ToDo')) {
+
+}
+else{
 let list = JSON.parse(localStorage.getItem('ToDo'));
 let count = 0, donecnt = 0, pendingcnt = 0;
 let au = localStorage.getItem('activeUser');
@@ -101,3 +105,4 @@ for (let i = list.length - 1; i >= 0; i--) {
 document.getElementById("tl").innerHTML = count;
 document.getElementById("ct").innerHTML = pendingcnt;
 document.getElementById("pt").innerHTML = donecnt;
+}
