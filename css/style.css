@@ -1,5 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
 *{margin: 0px;padding: 0px;}
+#rform{display:block;}
 .container{max-width: 1920px;margin: auto;}
 nav{background-color: #6f42c1;height: 100px;position: sticky;right: 0px;left:0px;top:0px;}
 .logo{color: white;float: left;}
