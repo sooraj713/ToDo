@@ -82,7 +82,7 @@
 		}
 		else if(rd < current)
 		{
-			label.textContent = "Reminder range should be from today onwards..";
+			label.textContent = "Reminder range should be less than due date or greater than current...";
 			label.style.color = "red";
 		}
 		else if(dueDate < current)
@@ -100,7 +100,7 @@
 			label.textContent = "Please enter the reminder date..";
 			label.style.color = "red";
 		}
-		else if(rd>dueDate || rd<current)
+		else if(rd > dueDate || rd < current)
 		{
 			label.textContent = "Reminder date should be before due Date..";
 			label.style.color = "red";

@@ -401,7 +401,7 @@ function editList(){
 		label.style.display = "red";
 	}
 	else if(RD > DD || RD < CD)
-	{
+	{       
 		label.textContent = "Reminder date should be less than due date or greater than current date..";
 		label.style.display = "red";
 	}

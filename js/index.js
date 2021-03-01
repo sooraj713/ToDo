@@ -1,7 +1,8 @@
 //if users are not present in database then it will create users array in db................
 if(!localStorage.getItem('users'))
 	localStorage.setItem('users', JSON.stringify([]))
-
+if(localStorage.getItem('activeUser') != "false")
+document.getElementById('rform').style.display = "none";
 //this is code for converting image into base64.........................................
 var imagebase64 = "";  
   
