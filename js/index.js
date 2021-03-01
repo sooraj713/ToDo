@@ -1,6 +1,9 @@
 //if users are not present in database then it will create users array in db................
 if(!localStorage.getItem('users'))
+{
 	localStorage.setItem('users', JSON.stringify([]))
+	document.getElementById('rform').style.display = "block";
+}
 if(localStorage.getItem('activeUser') != "false")
 document.getElementById('rform').style.display = "none";
 else
