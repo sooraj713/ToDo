@@ -9,6 +9,7 @@
 		document.getElementById('viewlist').style.display = "none";
 		document.getElementById("notify").style.display = 'none';
 		document.getElementById('dcard').style.display = "none";
+		document.getElementById('rform').style.display = "block";
 	}
 	else if(window.location.href.length == 71 && localStorage.getItem('activeUser') != 'false')
 	{
